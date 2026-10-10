@@ -26,4 +26,4 @@ Do not interpret arbitrary logits as probabilities. Define and test output conve
 6. Confirm UNKNOWN/low-confidence outputs leave the diverter unmoved.
 
 ## Current state
-No trained waste model is included. classifier.cpp intentionally returns UNKNOWN until a real model, preprocessing and output mapping are integrated. Camera pin mapping is unset until the exact board is chosen.
+No trained waste model is included. classifier.cpp now attempts camera initialization and frame capture, but intentionally returns UNKNOWN until a real model, preprocessing and output mapping are integrated. Camera pin mapping is unset until the exact board is chosen, so startup fails safely until it is configured.
