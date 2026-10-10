@@ -4,8 +4,9 @@
 #include "driver/ledc.h"
 namespace {
 constexpr ledc_mode_t kSpeedMode = LEDC_LOW_SPEED_MODE;
-constexpr ledc_timer_t kTimer = LEDC_TIMER_0;
-constexpr ledc_channel_t kChannel = LEDC_CHANNEL_0;
+// Keep servo timer/channel distinct from the camera driver's LEDC timer/channel.
+constexpr ledc_timer_t kTimer = LEDC_TIMER_1;
+constexpr ledc_channel_t kChannel = LEDC_CHANNEL_1;
 constexpr ledc_timer_bit_t kResolution = LEDC_TIMER_14_BIT;
 constexpr uint32_t kDutyMax = (1U << 14U) - 1U;
 constexpr uint32_t kPwmPeriodUs = 1000000U / app_config::kServoFrequencyHz;
