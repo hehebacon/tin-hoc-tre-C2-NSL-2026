@@ -7,7 +7,7 @@ This is a staged firmware foundation, not a finished AI sorter. Track implemente
 - [x] Sorter state machine with object debounce and review/fault states.
 - [x] Servo PWM manager and provisional four-class angle mapping.
 - [x] Classifier interface with fail-closed UNKNOWN stub.
-- [x] Camera manager interface using esp32-camera; refuses initialization while GPIOs are unset.
+- [x] Camera manager connected to classifier startup/capture path; refuses initialization while GPIOs are unset.
 - [x] Dataset folder layout checker and starter unit tests.
 - [x] AI model integration contract and hardware/camera bring-up checklists.
 - [x] GitHub Actions ESP-IDF build workflow.
@@ -34,4 +34,4 @@ This is a staged firmware foundation, not a finished AI sorter. Track implemente
 7. No network connection is required during classification.
 
 ## Current limitation
-The classifier intentionally returns UNKNOWN. Do not present this repository as recognizing waste yet. Exact hardware, pin map and dataset remain decision gates.
+The classifier attempts camera startup and frame capture but intentionally returns UNKNOWN. With GPIOs unset, startup fails safely. Do not present this repository as recognizing waste yet. Exact hardware, pin map and dataset remain decision gates.
