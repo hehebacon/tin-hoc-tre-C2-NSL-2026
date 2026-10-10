@@ -1,6 +1,6 @@
 # Camera bring-up checklist
 
-The camera driver is declared as an ESP-IDF component, and CameraManager uses the esp32-camera API. The camera GPIOs are deliberately set to -1 in main/app_config.h, so initialization is blocked until the exact board and camera pin map are known.
+The camera driver is declared as an ESP-IDF component, and CameraManager uses the esp32-camera API. The camera GPIOs are deliberately set to -1 in main/app_config.h, so classifier/controller startup intentionally fails safely until the exact board and camera pin map are known.
 
 ## Required before enabling camera
 
