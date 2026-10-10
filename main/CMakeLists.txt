@@ -6,5 +6,5 @@ idf_component_register(
         "perception/classifier.cpp"
         "perception/camera_manager.cpp"
     INCLUDE_DIRS "." "control" "actuators" "perception"
-    REQUIRES driver esp_timer esp32-camera
+    REQUIRES driver esp_timer esp32-camera log freertos
 )
