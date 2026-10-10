@@ -1,4 +1,5 @@
 #include "sorter_controller.h"
+#include <cmath>
 #include "app_config.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
@@ -57,7 +58,9 @@ void SorterController::tick() {
             }
             const Classification result = classifier_.classify();
             if (!result.valid || result.label == WasteClass::UNKNOWN ||
-                result.label >= WasteClass::COUNT || result.confidence < app_config::kMinimumConfidence) {
+                result.label >= WasteClass::COUNT || !std::isfinite(result.confidence) ||
+                result.confidence < 0.0f || result.confidence > 1.0f ||
+                result.confidence < app_config::kMinimumConfidence) {
                 ESP_LOGW(TAG, "No reliable prediction; diverter will not move");
                 setState(SorterState::NEEDS_REVIEW); break;
             }
