@@ -1,0 +1,3 @@
+CONFIG_IDF_TARGET="esp32s3"
+# Enable PSRAM only after confirming the selected board includes it.
+# Configure PSRAM settings through menuconfig for the exact board.
