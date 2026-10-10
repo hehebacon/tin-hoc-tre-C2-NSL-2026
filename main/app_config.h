@@ -1,10 +1,29 @@
 #pragma once
 #include <stdint.h>
 
-// PLACEHOLDER GPIOs. Confirm board and camera pin map before wiring.
+// All GPIOs below are placeholders until the exact board/camera is selected.
+// Negative camera pins intentionally disable camera initialization.
 namespace app_config {
-constexpr int kObjectSensorGpio = 4; // Assumes active-low digital sensor
-constexpr int kServoGpio = 5;        // PWM signal only; use separate servo supply
+constexpr int kObjectSensorGpio = 4; // Example only; assumes active-low digital sensor
+constexpr int kServoGpio = 5;        // Example only; PWM signal, external servo supply
+
+constexpr int kCameraXclkGpio = -1;
+constexpr int kCameraSccbSdaGpio = -1;
+constexpr int kCameraSccbSclGpio = -1;
+constexpr int kCameraD0Gpio = -1;
+constexpr int kCameraD1Gpio = -1;
+constexpr int kCameraD2Gpio = -1;
+constexpr int kCameraD3Gpio = -1;
+constexpr int kCameraD4Gpio = -1;
+constexpr int kCameraD5Gpio = -1;
+constexpr int kCameraD6Gpio = -1;
+constexpr int kCameraD7Gpio = -1;
+constexpr int kCameraVsyncGpio = -1;
+constexpr int kCameraHrefGpio = -1;
+constexpr int kCameraPclkGpio = -1;
+constexpr int kCameraPwdnGpio = -1;
+constexpr int kCameraResetGpio = -1;
+
 constexpr uint32_t kServoFrequencyHz = 50;
 constexpr uint32_t kServoMinPulseUs = 500;
 constexpr uint32_t kServoMaxPulseUs = 2500;
