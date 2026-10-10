@@ -57,4 +57,4 @@ Review these documents first:
 - Unknown or low-confidence predictions must not move the diverter.
 - GPIOs and servo angles are placeholders, not confirmed wiring/calibration.
 - A successful sort should only be reported after sensor feedback verifies it.
-- The current classifier is a stub; this repository does not yet contain a trained waste-recognition model.
+- The classifier now attempts camera initialization and frame capture, but still returns UNKNOWN because this repository does not yet contain a trained waste-recognition model.
