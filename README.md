@@ -25,6 +25,10 @@ Camera frame -> image preprocessing -> on-device classifier -> confidence gate -
 
 Confirm the official competition requirements before fixing labels or buying hardware.
 
+## Local checks
+
+Run the Python dataset-layout tests with `python3 -m unittest discover -s tests -v`. GitHub Actions runs these checks and attempts an ESP-IDF build on pushes and pull requests.
+
 ## Build
 
 Use ESP-IDF 5.x. From the project root:
@@ -41,6 +45,9 @@ Review these documents first:
 - `docs/CAMERA_BRINGUP.md`
 - `main/perception/AI_MODEL_PIPELINE.md`
 - `docs/FIRMWARE_PLAN.md`
+- `docs/PROJECT_STATUS.md`
+- `docs/DATASET_GUIDE.md`
+- `docs/TESTING.md`
 
 ## Safety and correctness
 
