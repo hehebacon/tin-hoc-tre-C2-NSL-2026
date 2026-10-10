@@ -4,6 +4,7 @@ idf_component_register(
         "control/sorter_controller.cpp"
         "actuators/actuator_manager.cpp"
         "perception/classifier.cpp"
+        "perception/camera_manager.cpp"
     INCLUDE_DIRS "." "control" "actuators" "perception"
-    REQUIRES driver
+    REQUIRES driver esp_timer esp32-camera
 )
