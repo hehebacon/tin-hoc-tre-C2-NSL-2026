@@ -11,6 +11,7 @@ Firmware scaffold for a camera-based waste sorter. The intended device captures 
 
 See:
 - [System design](docs/SYSTEM_DESIGN.md) — overall architecture, chute concept, offline AI, firmware, electrical design and evaluation.
+- [Modular assembly proposal](docs/MODULAR_ASSEMBLY.md) — seven mechanical/electronics modules, assembly sequence, provisional parts checklist and acceptance tests.
 - [Implementation roadmap](docs/ROADMAP.md) — phases, team allocation, backlog, definition of done and risk register.
 
 ## Current status
